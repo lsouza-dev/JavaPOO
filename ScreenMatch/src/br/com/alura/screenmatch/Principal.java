@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodios;
@@ -8,6 +10,8 @@ import br.com.alura.screenmatch.modelos.Serie;
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
+        meuFilme.setAnoDeLancamento(2020);
+        meuFilme.setNome("Avatar");
         meuFilme.setDuracaoEmMinutos(120);
 
         Filme meuFilme2 = new Filme();
@@ -33,5 +37,7 @@ public class Principal {
         episodios.setSerie(lost);
         episodios.setTotalVisualizacoes(300);
         filtro.filtra(episodios);
+
+        System.out.println(meuFilme);
     }
 }
