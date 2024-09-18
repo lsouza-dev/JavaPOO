@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch;
+package br.com.alura.screenmatch.principal;
 
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
@@ -9,15 +9,14 @@ import br.com.alura.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setAnoDeLancamento(2020);
-        meuFilme.setNome("Avatar");
+        Filme meuFilme = new Filme("Avatar",2020,"SEI LÁ");
         meuFilme.setDuracaoEmMinutos(120);
 
-        Filme meuFilme2 = new Filme();
+        Filme meuFilme2 = new Filme("O Poderoso Chefão",1970,"SEI LÁ");
+
         meuFilme2.setDuracaoEmMinutos(120);
 
-        Filme meuFilme3 = new Filme();
+        Filme meuFilme3 = new Filme("Dogville",2003,"SEI LÁ");
         meuFilme3.setDuracaoEmMinutos(120);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -25,7 +24,7 @@ public class Principal {
         calculadora.inclui(meuFilme2);
         calculadora.inclui(meuFilme3);
 
-        Serie lost = new Serie();
+        Serie lost = new Serie("Lost",2000);
 
         System.out.println(calculadora.getTempoTotal());
 
